@@ -1,5 +1,5 @@
 import React from 'react';
-import { ConnectWalletButton } from './components/ConnectWalletButton';
+import AuthButton from './components/Buttons/AuthButton';
 import MyInput from './components/MyInput';
 import GenerateReputationButton from './components/Buttons/GenerateReputationButton';
 import ViewReputationButton from './components/Buttons/ViewReputationButton';
@@ -14,7 +14,7 @@ export default function Home() {
       <div className='flex flex-col items-center'>
         <div className='flex flex-row items-center w-full gap-4'>
           <MyInput type='text' placeholder='Enter address or connect wallet' className='flex-grow' />
-          <ConnectWalletButton />
+          <AuthButton />
         </div>
         <div className='grid grid-cols-3 gap-4 mt-4'>
           <GenerateReputationButton />

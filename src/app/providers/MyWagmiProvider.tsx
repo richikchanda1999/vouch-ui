@@ -12,9 +12,11 @@ import {
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 
+console.log(process.env.INFURA_API_KEY);
+
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [polygon, polygonMumbai, celo, sepolia], // Dummy list of chains
-  [infuraProvider({ apiKey: process.env.INFURA_KEY! })]
+  [infuraProvider({ apiKey: process.env.INFURA_API_KEY! })]
 );
 
 const config = createConfig({
