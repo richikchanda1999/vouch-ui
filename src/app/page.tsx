@@ -1,7 +1,12 @@
 import React from 'react';
-import MyButton from './components/MyButton';
 import { ConnectWalletButton } from './components/ConnectWalletButton';
 import MyInput from './components/MyInput';
+import GenerateReputationButton from './components/Buttons/GenerateReputationButton';
+import ViewReputationButton from './components/Buttons/ViewReputationButton';
+import MintTokensButton from './components/Buttons/MintTokensButton';
+import VouchButton from './components/Buttons/VouchButton';
+import UnvouchButton from './components/Buttons/UnvouchButton';
+import VouchFromButton from './components/Buttons/VouchFromButton';
 
 export default function Home() {
   return (
@@ -12,12 +17,12 @@ export default function Home() {
           <ConnectWalletButton />
         </div>
         <div className='grid grid-cols-3 gap-4 mt-4'>
-          <MyButton>Generate reputation</MyButton>
-          <MyButton>View reputation</MyButton>
-          <MyButton>Mint Tokens</MyButton>
-          <MyButton>Vouch</MyButton>
-          <MyButton>Unvouch</MyButton>
-          <MyButton>Vouch From</MyButton>
+          <GenerateReputationButton />
+          <ViewReputationButton />
+          <MintTokensButton />
+          <VouchButton />
+          <UnvouchButton />
+          <VouchFromButton />
         </div>
       </div>
     </main>
