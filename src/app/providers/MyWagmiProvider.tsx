@@ -5,6 +5,7 @@ import { WagmiConfig, configureChains, createConfig, mainnet } from "wagmi";
 import { infuraProvider } from "@wagmi/core/providers/infura";
 import {
   celo,
+  goerli,
   polygon,
   polygonMumbai,
   sepolia,
@@ -15,7 +16,7 @@ import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 console.log(process.env.INFURA_API_KEY);
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [polygon, polygonMumbai, celo, sepolia], // Dummy list of chains
+  [polygon, polygonMumbai, celo, sepolia, goerli], // Dummy list of chains
   [infuraProvider({ apiKey: process.env.INFURA_API_KEY! })]
 );
 
