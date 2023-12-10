@@ -37,7 +37,7 @@ export default function Home() {
             />
             <MyInput
               type="text"
-              placeholder="Enter address or connect wallet"
+              placeholder="Enter address (only for vouchFrom)"
               className="flex-grow"
               value={fromAddress}
               onChange={(e) => {
@@ -46,7 +46,7 @@ export default function Home() {
             />
             <MyInput
               type="text"
-              placeholder="Enter to address"
+              placeholder="Enter to address (for vouch and vouchFrom)"
               className="flex-grow"
               value={toAddress}
               onChange={(e) => {

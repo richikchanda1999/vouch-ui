@@ -23,10 +23,10 @@ export default function EnablePluginButton() {
         // Enable the plugin on the token contract
         const tx = await signer.writeContract({
           abi: VouchTokenJSON.abi,
-          address: "0xB128D44532333d2973F368Acc813de22F84a0140",
+          address: "0xDd136190c8465bf7C123B466982384a80c94F9D5",
           functionName: "addPlugin",
           account: address,
-          args: ["0xfB437cba91Fe06f4B37e0f97Cb22ED53358Dc354"],
+          args: ["0xA4ee420D730273028520EE02726b19162B754bb9"],
         });
 
         setLoading(false);

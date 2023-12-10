@@ -38,10 +38,10 @@ export default function MintTokensButton() {
         // Mint tokens
         const tx = await signer.writeContract({
             abi: VouchTokenJSON.abi,
-            address: "0xB128D44532333d2973F368Acc813de22F84a0140",
+            address: "0xDd136190c8465bf7C123B466982384a80c94F9D5",
             functionName: 'mint',
             account: address,
-            args: [address, parseUnits(amount.toString(), 18)]
+            args: [address, amount]
         })
 
         setLoading(false)

@@ -25,14 +25,16 @@ export default function VouchButton({ toAddress, amount }: Props) {
         if (!signer) return;
 
         setLoading(true);
+
+        console.log(parseUnits(amount.toString(), 18))
         
         // Call the _vouch function in the contract
         const tx = await signer.writeContract({
           abi: ReputationPluginJSON.abi,
-          address: "0xfB437cba91Fe06f4B37e0f97Cb22ED53358Dc354",
+          address: "0xA4ee420D730273028520EE02726b19162B754bb9",
           functionName: "vouch",
           account: address,
-          args: [toAddress, parseUnits(amount.toString(), 18)],
+          args: [toAddress, amount],
         });
 
         setLoading(false);
